@@ -208,12 +208,14 @@ def download_video_lesson(
     file_path.parent.mkdir(parents=True, exist_ok=True)
     logger.info(f"Parsing url: {lesson_video_url}")
     try:
-        download_video(
-            url=lesson_video_url,
-            output_path=file_path,
-            cookie=cookie,
-            quality=quality,
-        )
+        #download_video(
+        #    url=lesson_video_url,
+        #    output_path=file_path,
+        #    cookie=cookie,
+        #    quality=quality,
+        #)
+        with open('w',file_path) as f:
+            f.write(url)
     except yt_dlp.utils.UnsupportedError as ex:
         logger.error(
             f"Could not download video in link {lesson_video_url}. "
