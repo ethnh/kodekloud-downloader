@@ -214,7 +214,7 @@ def download_video_lesson(
         #    cookie=cookie,
         #    quality=quality,
         #)
-        with open('w',file_path) as f:
+        with open(file_path,'w') as f:
             f.write(url)
     except yt_dlp.utils.UnsupportedError as ex:
         logger.error(
