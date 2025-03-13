@@ -215,7 +215,7 @@ def download_video_lesson(
         #    quality=quality,
         #)
         with open(file_path,'w') as f:
-            f.write(url)
+            f.write(lesson_video_url)
     except yt_dlp.utils.UnsupportedError as ex:
         logger.error(
             f"Could not download video in link {lesson_video_url}. "
